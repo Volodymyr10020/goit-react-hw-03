@@ -6,7 +6,7 @@ const SearchBox = ({ value, onSearch }) => {
   };
 
   return (
-    <div>
+    <div className={styles.searchBox}>
       <label>
         Find contacts by name:
         <input type="text" value={value} onChange={handleSearch} />

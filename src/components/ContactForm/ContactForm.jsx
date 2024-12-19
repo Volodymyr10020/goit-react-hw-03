@@ -26,18 +26,20 @@ const ContactForm = ({ onSubmit }) => {
       onSubmit={handleSubmit}
       validationSchema={validationSchema}
     >
-      <Form>
+      <Form className={styles.form}>
         <label>
           Name:
           <Field type="text" name="name" />
-          <ErrorMessage />
+          <ErrorMessage name="name" component="div" />
         </label>
         <label>
           Number:
           <Field type="text" name="number" />
-          <ErrorMessage />
+          <ErrorMessage name="number" component="div" />
         </label>
-        <button type="submit">Add contact</button>
+        <button type="submit" className={styles.button}>
+          Add contact
+        </button>
       </Form>
     </Formik>
   );

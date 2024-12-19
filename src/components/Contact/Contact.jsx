@@ -2,9 +2,11 @@ import styles from "./Contact.module.css";
 
 const Contact = ({ name, number, onDelete }) => {
   return (
-    <li>
+    <li className={styles.item}>
       {name}: {number}
-      <button onClick={onDelete}>Delete</button>
+      <button className={styles.deleteButton} onClick={onDelete}>
+        Delete
+      </button>
     </li>
   );
 };
